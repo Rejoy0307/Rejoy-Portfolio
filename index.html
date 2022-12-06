@@ -564,34 +564,25 @@
                 <div class="row">
                   <div class="form-group col-md-12">
                     <label for="name">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"class="php-email-form"
-                      required
-                    />
+                    <input type="text" name="name" class="form-control" id="user" class="php-email-form" onblur="namecheck()"/>
+                      <label id="nmlabel" for="name" style="display: none; color:red;">This field is requierd</label>
+                      <label id="nmlabel-01" for="name" style="display: none; color:red;">Name does't start with number</label>
+                      <label id="nmlabel-02" for="name" style="display: none; color:red;">Name does't contain special charecters</label>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="name">Your Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      required
-                    />
+                       <input type="email" class="form-control" name="email" id="email" onblur="emailcheck()"/>
+                       <label id="el" for="name" style="display: none; color:red;">This field is requierd</label>
+                       <label id="el-01" for="name" style="display: none; color:red;">Email does't start with number</label>
+                       <label id="el-02" for="name" style="display: none; color:red;">Email is invalid</label>
                   </div>
                 </div>
   
                 <div class="form-group">
                   <label for="name">Message</label>
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="10"
-                    required
-                  ></textarea>
+                  <textarea class="form-control" name="message" rows="10"  id="messg" onblur="msgcheck()"></textarea>
+                   <label id="ml" for="name" style="display: none; color:red;">This field is requierd</label>
+                   <label id="ml-01" for="name" style="display: none; color:red;">Minimum 50 letters</label>
                 </div>
                 <div class="my-3">
                   <!-- <div class="loading">Loading</div> -->
@@ -666,6 +657,8 @@
             })
         })
     </script>
+
+    <script src="gform.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
